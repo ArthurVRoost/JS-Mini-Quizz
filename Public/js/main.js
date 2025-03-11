@@ -21,12 +21,13 @@ let reponse7 ="Marineford et Impel Down"
 let reponse8 ="Portgas D. Ace"
 let reponse9 ="Le One Piece"
 let reponse10 ="Eiichirō Oda"
+
 let resultat = 0
 
 console.log(question1)
 let MaReponse = prompt(question1)
 if (MaReponse == reponse1){
-    console.log( reponse1 + "Bonne réponse!")
+    console.log("Bonne réponse!")
     resultat++;
 }
 else{
@@ -36,7 +37,7 @@ else{
 console.log(question2)
 let MaReponse2 = prompt(question2)
 if (MaReponse2 == reponse2){
-    console.log( reponse2 + "Bonne réponse!")
+    console.log("Bonne réponse!")
     resultat++;
 }
 else{
@@ -46,7 +47,7 @@ else{
 console.log(question3)
 let MaReponse3 = prompt(question3)
 if (MaReponse3 == reponse3){
-    console.log( reponse3 + "Bonne réponse!")
+    console.log("Bonne réponse!")
     resultat++;
 }
 else{
@@ -56,7 +57,7 @@ else{
 console.log(question4)
 let MaReponse4 = prompt(question4)
 if (MaReponse4 == reponse4){
-    console.log( reponse4 + "Bonne réponse!")
+    console.log("Bonne réponse!")
     resultat++;
 }
 else{
@@ -66,7 +67,7 @@ else{
 console.log(question5)
 let MaReponse5 = prompt(question5)
 if (MaReponse5 == reponse5){
-    console.log( reponse5 + "Bonne réponse!")
+    console.log("Bonne réponse!")
     resultat++;
 }
 else{
@@ -76,7 +77,7 @@ else{
 console.log(question6)
 let MaReponse6 = prompt(question6)
 if (MaReponse6 == reponse6){
-    console.log( reponse6 + "Bonne réponse!")
+    console.log("Bonne réponse!")
     resultat++;
 }
 else{
@@ -86,7 +87,7 @@ else{
 console.log(question7)
 let MaReponse7 = prompt(question7)
 if (MaReponse7 == reponse7){
-    console.log( reponse7 + "Bonne réponse!")
+    console.log("Bonne réponse!")
     resultat++;
 }
 else{
@@ -96,7 +97,7 @@ else{
 console.log(question8)
 let MaReponse8 = prompt(question8)
 if (MaReponse8 == reponse8){
-    console.log( reponse8 + "Bonne réponse!")
+    console.log("Bonne réponse!")
     resultat++;
 }
 else{
@@ -106,7 +107,7 @@ else{
 console.log(question9)
 let MaReponse9 = prompt(question9)
 if (MaReponse9 == reponse9){
-    console.log( reponse9 + "Bonne réponse!")
+    console.log("Bonne réponse!")
     resultat++;
 }
 else{
@@ -116,7 +117,7 @@ else{
 console.log(question10)
 let MaReponse10 = prompt(question10)
 if (MaReponse10 == reponse10){
-    console.log( reponse10 + "Bonne réponse!")
+    console.log("Bonne réponse!")
     resultat++;
 }
 else{
