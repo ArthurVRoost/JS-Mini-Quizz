@@ -1,5 +1,5 @@
 .bgHeader{
-    background-color: rgba(106, 13, 32, 0.932);
+    background-color: rgba(146, 123, 10, 0.932);
 }
 .textColorHeader{
     color: white;
@@ -9,4 +9,7 @@
 }
 .bgCR{
     background-color: gray;
+}
+.bodyBg{
+    background-color: rgba(27, 137, 27, 0.689);
 }
