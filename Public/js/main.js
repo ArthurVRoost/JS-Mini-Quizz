@@ -2,7 +2,7 @@ console.log("Bonjour bienvenu sur votre quizz spécial One Piece")
 console.log("On va vous posez une série de 10 questions, a vous de bien y répondre!")
 let question1= "Comment s'appelle le héros principal de One Piece?"
 let question2 ="Quel est le rêve de Monkey D. Luffy?"
-let quesiton3 ="Quel fruit du démon Luffy a-t-il mangé?"
+let question3 ="Quel fruit du démon Luffy a-t-il mangé?"
 let question4 ="Comment s'appelle le bateau des Chapeaux de Paille avant le Thousand Sunny?"
 let question5 ="Quel est le nom du sabreur de l'équipage de Luffy?"
 let question6 ="Qui est le médecin de l'équipage des Chapeaux de Paille?"
@@ -41,7 +41,7 @@ else{
     console.log("Mauvaise réponse, la bonne réponse était: ", reponse2)
 }
 
-console.log(quesiton3)
+console.log(question3)
 let MaReponse3 = prompt(question3)
 if (MaReponse3 == reponse3){
     console.log( reponse3 + "Bonne réponse!")
@@ -77,7 +77,7 @@ else{
     console.log("Mauvaise réponse, la bonne réponse était: ", reponse6)
 }
 
-console.log(quesiton7)
+console.log(question7)
 let MaReponse7 = prompt(question7)
 if (MaReponse7 == reponse7){
     console.log( reponse7 + "Bonne réponse!")
@@ -86,11 +86,29 @@ else{
     console.log("Mauvaise réponse, la bonne réponse était: ", reponse7)
 }
 
-console.log(quesiton8)
+console.log(question8)
 let MaReponse8 = prompt(question8)
 if (MaReponse8 == reponse8){
     console.log( reponse8 + "Bonne réponse!")
 }
 else{
     console.log("Mauvaise réponse, la bonne réponse était: ", reponse8)
+}
+
+console.log(question9)
+let MaReponse9 = prompt(question9)
+if (MaReponse9 == reponse9){
+    console.log( reponse9 + "Bonne réponse!")
+}
+else{
+    console.log("Mauvaise réponse, la bonne réponse était: ", reponse9)
+}
+
+console.log(question10)
+let MaReponse10 = prompt(question10)
+if (MaReponse10 == reponse10){
+    console.log( reponse10 + "Bonne réponse!")
+}
+else{
+    console.log("Mauvaise réponse, la bonne réponse était: ", reponse10)
 }
