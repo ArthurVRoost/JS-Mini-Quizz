@@ -26,7 +26,7 @@ let reponse10 ="Eiichirō Oda"
 console.log(question1)
 let MaReponse = prompt(question1)
 if (MaReponse == reponse1){
-    console.log( reponse1 +"Bonne réponse!")
+    console.log( reponse1 + "Bonne réponse!")
 }
 else{
     console.log("Mauvaise réponse, la bonne réponse était: ", reponse1)
@@ -35,16 +35,62 @@ else{
 console.log(question2)
 let MaReponse2 = prompt(question2)
 if (MaReponse2 == reponse2){
-    console.log("Bonne réponse!")
+    console.log( reponse2 + "Bonne réponse!")
 }
 else{
-    console.log("Mauvaise réponse")
+    console.log("Mauvaise réponse, la bonne réponse était: ", reponse2)
 }
+
 console.log(quesiton3)
 let MaReponse3 = prompt(question3)
 if (MaReponse3 == reponse3){
     console.log( reponse3 + "Bonne réponse!")
 }
 else{
-    console.log("Mauvaise réponse")
+    console.log("Mauvaise réponse, la bonne réponse était: ", reponse3)
+}
+
+console.log(question4)
+let MaReponse4 = prompt(question4)
+if (MaReponse4 == reponse4){
+    console.log( reponse4 + "Bonne réponse!")
+}
+else{
+    console.log("Mauvaise réponse, la bonne réponse était: ", reponse4)
+}
+
+console.log(question5)
+let MaReponse5 = prompt(question5)
+if (MaReponse5 == reponse5){
+    console.log( reponse5 + "Bonne réponse!")
+}
+else{
+    console.log("Mauvaise réponse, la bonne réponse était: ", reponse5)
+}
+
+console.log(question6)
+let MaReponse6 = prompt(question6)
+if (MaReponse6 == reponse6){
+    console.log( reponse6 + "Bonne réponse!")
+}
+else{
+    console.log("Mauvaise réponse, la bonne réponse était: ", reponse6)
+}
+
+console.log(quesiton7)
+let MaReponse7 = prompt(question7)
+if (MaReponse7 == reponse7){
+    console.log( reponse7 + "Bonne réponse!")
+}
+else{
+    console.log("Mauvaise réponse, la bonne réponse était: ", reponse7)
+}
+
+console.log(quesiton8)
+let MaReponse8 = prompt(question8)
+if (MaReponse8 == reponse8){
+    console.log( reponse8 + "Bonne réponse!")
+}
+else{
+    console.log("Mauvaise réponse, la bonne réponse était: ", reponse8)
 }
