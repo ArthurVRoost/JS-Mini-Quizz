@@ -22,3 +22,29 @@ let reponse8 ="Portgas D. Ace"
 let reponse9 ="Le One Piece"
 let reponse10 ="Eiichirō Oda"
 
+
+console.log(question1)
+let MaReponse = prompt(question1)
+if (MaReponse == reponse1){
+    console.log( reponse1 +"Bonne réponse!")
+}
+else{
+    console.log("Mauvaise réponse, la bonne réponse était: ", reponse1)
+}
+
+console.log(question2)
+let MaReponse2 = prompt(question2)
+if (MaReponse2 == reponse2){
+    console.log("Bonne réponse!")
+}
+else{
+    console.log("Mauvaise réponse")
+}
+console.log(quesiton3)
+let MaReponse3 = prompt(question3)
+if (MaReponse3 == reponse3){
+    console.log( reponse3 + "Bonne réponse!")
+}
+else{
+    console.log("Mauvaise réponse")
+}
