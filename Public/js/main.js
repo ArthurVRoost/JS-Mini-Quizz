@@ -10,3 +10,15 @@ let question7 ="Quel est le nom de l'île où se trouve la Marine et les prisons
 let question8 ="Qui est le frère de Luffy qui a mangé le Mera Mera no Mi?"
 let question9 ="Quel est le nom du trésor légendaire recherché par tous les pirates?"
 let question10 ="Qui est le créateur de One Piece?"
+
+let reponse1 ="Monkey D. Luffy"
+let reponse2 ="Devenir le Roi des Pirates"
+let reponse3 ="Le Gomu Gomu no Mi"
+let reponse4 ="Le Vogue Merry"
+let reponse5 ="Roronoa Zoro"
+let reponse6 ="Tony Tony Chopper"
+let reponse7 ="Marineford et Impel Down"
+let reponse8 ="Portgas D. Ace"
+let reponse9 ="Le One Piece"
+let reponse10 ="Eiichirō Oda"
+
