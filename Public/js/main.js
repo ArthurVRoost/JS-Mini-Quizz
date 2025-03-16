@@ -1,127 +1,142 @@
-console.log("Bonjour bienvenu sur votre quizz spécial One Piece")
-console.log("On va vous posez une série de 10 questions, a vous de bien y répondre!")
-let question1= "Comment s'appelle le héros principal de One Piece?"
-let question2 ="Quel est le rêve de Monkey D. Luffy?"
-let question3 ="Quel fruit du démon Luffy a-t-il mangé?"
-let question4 ="Comment s'appelle le bateau des Chapeaux de Paille avant le Thousand Sunny?"
-let question5 ="Quel est le nom du sabreur de l'équipage de Luffy?"
-let question6 ="Qui est le médecin de l'équipage des Chapeaux de Paille?"
-let question7 ="Quel est le nom de l'île où se trouve la Marine et les prisons de haute sécurité?"
-let question8 ="Qui est le frère de Luffy qui a mangé le Mera Mera no Mi?"
-let question9 ="Quel est le nom du trésor légendaire recherché par tous les pirates?"
-let question10 ="Qui est le créateur de One Piece?"
+// JAI TAFFE SUR UN AUTRE DOSSIER POUR LE PROJET POUR CA QUE MES COMMITS SONT DE L'IMPORT DE CHAQUE PAGE 
+//  JE RAJOUTE DES COMMENTAIRES LA OU JE PENSE QUE C'EST NECESSAIRE 
 
-let reponse1 ="Monkey D. Luffy"
-let reponse2 ="Devenir le Roi des Pirates"
-let reponse3 ="Le Gomu Gomu no Mi"
-let reponse4 ="Le Vogue Merry"
-let reponse5 ="Roronoa Zoro"
-let reponse6 ="Tony Tony Chopper"
-let reponse7 ="Marineford et Impel Down"
-let reponse8 ="Portgas D. Ace"
-let reponse9 ="Le One Piece"
-let reponse10 ="Eiichirō Oda"
+let questions = [
+    {question: "Comment s'appelle le héros principal de One Piece?", choices: ["Monkey D. Luffy", "Zoro", "Shanks"], answer: "Monkey D. Luffy"},
+    {question: "Quel est le rêve de Monkey D. Luffy?", choices: ["Devenir un empereur", "Devenir le Roi des Pirates", "Trouver le One Piece"], answer: "Devenir le Roi des Pirates"},
+    {question: "Quel fruit du démon Luffy a-t-il mangé?", choices: ["Gomu Gomu no Mi", "Mera Mera no Mi", "Yami Yami no Mi"], answer: "Gomu Gomu no Mi"},
+    {question: "Comment s'appelle le bateau des Chapeaux de Paille avant le Thousand Sunny?", choices: ["Vogue Merry", "Red Force", "Moby Dick"], answer: "Vogue Merry"},
+    {question: "Quel est le nom du sabreur de l'équipage de Luffy?", choices: ["Sanji", "Brook", "Roronoa Zoro"], answer: "Roronoa Zoro"},
+    {question: "Qui est le médecin de l'équipage des Chapeaux de Paille?", choices: ["Tony Tony Chopper", "Franky", "Nami"], answer: "Tony Tony Chopper"},
+    {question: "Quel est le nom de l'île où se trouve la Marine et les prisons de haute sécurité?", choices: ["Marineford et Impel Down", "Dressrosa", "Sabaody"], answer: "Marineford et Impel Down"},
+    {question: "Qui est le frère de Luffy qui a mangé le Mera Mera no Mi?", choices: ["Sabo", "Portgas D. Ace", "Garp"], answer: "Portgas D. Ace"},
+    {question: "Quel est le nom du trésor légendaire recherché par tous les pirates?", choices: ["Le One Piece", "Le Davy Back Fight", "L'Op-Op Fruit"], answer: "Le One Piece"},
+    {question: "Qui est le créateur de One Piece?", choices: ["Eiichirō Oda", "Masashi Kishimoto", "Akira Toriyama"], answer: "Eiichirō Oda"}
+];
 
-let resultat = 0
 
-console.log(question1)
-let MaReponse = prompt(question1)
-if (MaReponse == reponse1){
-    console.log("Bonne réponse!")
-    resultat++;
-}
-else{
-    console.log("Mauvaise réponse, la bonne réponse était: ", reponse1)
-}
+let playerName;
+let score = 0;
+let currentQuestionIndex = 0;
+let gameState = "initializing";  
+// etat du jeu
 
-console.log(question2)
-let MaReponse2 = prompt(question2)
-if (MaReponse2 == reponse2){
-    console.log("Bonne réponse!")
-    resultat++;
-}
-else{
-    console.log("Mauvaise réponse, la bonne réponse était: ", reponse2)
-}
 
-console.log(question3)
-let MaReponse3 = prompt(question3)
-if (MaReponse3 == reponse3){
-    console.log("Bonne réponse!")
-    resultat++;
+function start() {
+    playerName = prompt("Entrez votre nom:");
+    if (playerName === null || playerName.trim() === "") {
+        playerName = "Anonyme"; 
+    }
+    document.getElementById("welcome").innerText = "Bienvenue " + playerName + " !";
+    
+    Question();
+    gameState = "waiting";
 }
-else{
-    console.log("Mauvaise réponse, la bonne réponse était: ", reponse3)
-}
+// le .trim() enleve les blancs au debut et fin de string
+// displayquestion, appelle la premiere question et change l'etat du jeu
 
-console.log(question4)
-let MaReponse4 = prompt(question4)
-if (MaReponse4 == reponse4){
-    console.log("Bonne réponse!")
-    resultat++;
-}
-else{
-    console.log("Mauvaise réponse, la bonne réponse était: ", reponse4)
-}
 
-console.log(question5)
-let MaReponse5 = prompt(question5)
-if (MaReponse5 == reponse5){
-    console.log("Bonne réponse!")
-    resultat++;
+function Question() {
+    const quizDiv = document.getElementById("quiz");
+    quizDiv.innerHTML = "";
+    
+    if (currentQuestionIndex < questions.length) {
+        const currentQuestion = questions[currentQuestionIndex];
+        
+        
+        const questionDiv = document.createElement("div");
+        questionDiv.classList.add("question");
+        questionDiv.innerHTML = `<p>${currentQuestion.question}</p>`;
+        // verifie s'il reste des question et crée la div et ajoute la classe pour la question
+        
+        
+        let i = 0;
+        while (i < currentQuestion.choices.length) {
+            const button = document.createElement("button");
+            button.innerText = currentQuestion.choices[i];
+            button.setAttribute("data-index", i);
+            
+            
+            button.addEventListener("click", function() {
+                if (gameState === "waiting") {
+                    reponse(this, currentQuestion);
+                }
+            });
+            
+            questionDiv.appendChild(button);
+            i++;
+        }
+        
+        quizDiv.appendChild(questionDiv);
+    } else {
+        
+        Resultat();
+    }
 }
-else{
-    console.log("Mauvaise réponse, la bonne réponse était: ", reponse5)
-}
+// crée le bouton pour les reponses, appel des fonctions pour réagit en conséquences, si plus de question a posé montre le resultat
 
-console.log(question6)
-let MaReponse6 = prompt(question6)
-if (MaReponse6 == reponse6){
-    console.log("Bonne réponse!")
-    resultat++;
-}
-else{
-    console.log("Mauvaise réponse, la bonne réponse était: ", reponse6)
-}
 
-console.log(question7)
-let MaReponse7 = prompt(question7)
-if (MaReponse7 == reponse7){
-    console.log("Bonne réponse!")
-    resultat++;
+function reponse(buttonElement, question) {
+    gameState = "processing";
+    const selectedChoice = buttonElement.innerText;
+    
+    
+    if (selectedChoice === question.answer) {
+        buttonElement.classList.add("correct");
+        score++;
+    } else {
+        buttonElement.classList.add("incorrect");
+        
+    }
+    
+// verifie ta reponse et ajoute la classe qu'il faut si c'est correcte ou pas
+    
+    const buttons = document.querySelectorAll("#quiz button");
+    let j = 0;
+    while (j < buttons.length) {
+        buttons[j].disabled = true;
+        j++;
+    }
+    // empeche de choisir plusieurs reponses
+    
+    const answersDiv = document.getElementById("answers");
+    const answerDiv = document.createElement("div");
+    answerDiv.classList.add("answer");
+    answerDiv.innerHTML = `${question.question}: ${selectedChoice}`;
+    
+    if (selectedChoice === question.answer) {
+        answerDiv.classList.add("correct");
+    } else {
+        answerDiv.classList.add("incorrect");
+        
+    }
+    
+    answersDiv.appendChild(answerDiv);
+    // affiche la reponse et la question choisi et ajoute la classe correcte ou incorrecte
+    
+    setTimeout(function() {
+        currentQuestionIndex++;
+        gameState = "initializing";
+        Question();
+        gameState = "waiting";
+    }, 1500); 
 }
-else{
-    console.log("Mauvaise réponse, la bonne réponse était: ", reponse7)
-}
+// ajoute un delai avant de passer a la prochaine question, appelle la fontion pour la prochaine question
 
-console.log(question8)
-let MaReponse8 = prompt(question8)
-if (MaReponse8 == reponse8){
-    console.log("Bonne réponse!")
-    resultat++;
+function Resultat() {
+    gameState = "finished";
+    const resultDiv = document.getElementById("result");
+    resultDiv.classList.remove("hidden");
+    
+    if (score >= 8) {
+        resultDiv.innerText = "Bravo " + playerName + " ! T'es un loup de One Piece ! Score: " + score + "/" + questions.length;
+    } else if (score >= 5) {
+        resultDiv.innerText = "Pas mal " + playerName + " ! Moyen. Score: " + score + "/" + questions.length;
+    } else {
+        resultDiv.innerText = "Horrible " + playerName + "... Relis One Piece ! Score: " + score + "/" + questions.length;
+    }
 }
-else{
-    console.log("Mauvaise réponse, la bonne réponse était: ", reponse8)
-}
+// change l'etat du jeu, enleve la classe hidden + mets un message approprié
 
-console.log(question9)
-let MaReponse9 = prompt(question9)
-if (MaReponse9 == reponse9){
-    console.log("Bonne réponse!")
-    resultat++;
-}
-else{
-    console.log("Mauvaise réponse, la bonne réponse était: ", reponse9)
-}
-
-console.log(question10)
-let MaReponse10 = prompt(question10)
-if (MaReponse10 == reponse10){
-    console.log("Bonne réponse!")
-    resultat++;
-}
-else{
-    console.log("Mauvaise réponse, la bonne réponse était: ", reponse10)
-}
-
-console.log("Voici votre resultat final: ",resultat)
+start();
+// start quizz
